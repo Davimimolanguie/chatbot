@@ -14,7 +14,7 @@ while resposta1 != "desligar1":
     print()
     if resposta1.find("desligar") >-1:
         break
-    elif any(keyword in resposta1.lower() for keyword in ["o que é", "quem é", "o que foi", "quem foi"]):
+    elif any(keyword in resposta1.lower() for keyword in ["o que é ", "quem é ", "o que foi ", "quem foi ", "o que e", "quem e ", "quem foram ", "quem são ", "quem sao ", "quem foi "]):
         resultado = pesquisar(resposta1)
         resposta1 = input(f"Chatbot: {resultado}" + " : ")
 
