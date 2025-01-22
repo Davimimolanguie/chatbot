@@ -36,5 +36,4 @@ def hardcode(resposta1):
     resposta1 = resposta1.replace(" ", "_")
     resposta1 = resposta1.replace(".", "")
     resposta1 = resposta1.replace("?", "")
-    resposta1 = replacesada
-    return replacesada
+    return resposta1
