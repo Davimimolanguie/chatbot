@@ -1,3 +1,4 @@
+from pacote.replace import hardcode
 from pacote.requisicoes import pesquisar
 import requests
 from bs4 import BeautifulSoup
@@ -15,6 +16,7 @@ while resposta1 != "desligar1":
     if resposta1.find("desligar") >-1:
         break
     elif any(keyword in resposta1.lower() for keyword in ["o que é ", "quem é ", "o que foi ", "quem foi ", "o que e", "quem e ", "quem foram ", "quem são ", "quem sao ", "quem foi "]):
+        resposta1 = hardcode(resposta1)
         resultado = pesquisar(resposta1)
         resposta1 = input(f"Chatbot: {resultado}" + " : ")
 
