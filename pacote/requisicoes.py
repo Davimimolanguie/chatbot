@@ -1,10 +1,9 @@
 import requests
 from pacote.replace import hardcode
 
-def pesquisar(resposta1):
-    replace(resposta1)
-    url = f"https://pt.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles={resposta1}&exintro=true&explaintext=true"
-    ir = requests.get(url)
+def pesquisar(respostamod):
+    replace(respostamod)
+    ir = requests.get("https://pt.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles="+resposta1+"&exintro=true&explaintext=true")
 
     if ir.status_code == 200:
         data = ir.json()
