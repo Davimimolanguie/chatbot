@@ -2,7 +2,7 @@ import requests
 from pacote.replace import hardcode
 
 def pesquisar(respostamod):
-    replace(respostamod)
+    hardcode(respostamod)
     ir = requests.get("https://pt.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles="+resposta1+"&exintro=true&explaintext=true")
 
     if ir.status_code == 200:
